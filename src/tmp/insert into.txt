@@ -1,0 +1,43 @@
+INSERT INTO companies (
+  name,
+  establishment_date,
+  founder
+) VALUES (
+  'mercari inc',
+  '2013-02-01',
+  'Shintaro Yamada'
+);
+
+INSERT INTO companies (
+  name,
+  establishment_date,
+  founder
+) VALUES (
+  'yosyos inc',
+  '2021-03-04',
+  'Yoshikazu Ishitsuka'
+);
+
+INSERT INTO companies (
+  name,
+  establishment_date,
+  founder
+) VALUES (
+  'test inc',
+  '2013-B2-01C',
+  'test'
+);
+
+INSERT INTO reviews (
+  title,
+  author,
+  status,
+  score,
+  summary
+) VALUES (
+  'kingdom',
+  'hara motohisa',
+  'reading',
+  '5',
+  'Excellent'
+);
