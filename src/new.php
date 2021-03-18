@@ -1,5 +1,27 @@
 <?php
+
+// session_start();
+
+$review = [
+    'title' => '',
+    'author' => '',
+    'status' => '未読',
+    'score' => '',
+    'summary' => ''
+];
+
+// if (isset($_POST['summary'])) {
+//     $_SESSION['summary'] = $_POST['summary'];
+// }
+
+$errors = [];
+
+include 'views/new.php';
+
+//
 ?>
+
+<!--
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -51,4 +73,4 @@
     </form>
 </body>
 
-</html>
+</html> -->
