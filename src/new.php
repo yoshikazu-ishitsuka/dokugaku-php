@@ -26,7 +26,7 @@
             <label>読書状況</label>
             <div>
                 <div>
-                    <input type="radio" name="status" id="status1" value="未読">
+                    <input type="radio" name="status" id="status1" value="未読" checked="checked">
                     <label for="status1">未読</label>
                 </div>
                 <div>
