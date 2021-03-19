@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/css/app.css">
     <title>読書ログの登録</title>
 </head>
 
@@ -40,7 +41,8 @@
                     <label for="status2">読んでる</label>
                 </div>
                 <div>
-                    <input class="form-check-input" type="radio" name="status" id="status3" value="読了" <?php echo ($review['status'] === '読了') ? 'checked' : ''; ?>>
+                    <!-- class="form-check-input"  -->
+                    <input type="radio" name="status" id="status3" value="読了" <?php echo ($review['status'] === '読了') ? 'checked' : ''; ?>>
                     <label for="status3">読了</label>
                 </div>
             </div>
