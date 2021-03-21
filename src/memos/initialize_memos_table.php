@@ -1,5 +1,17 @@
 <?php
 
+function dbConnect()
+{
+  $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
+  if (!$link) {
+    echo "Error: データベースに接続できません。：" . PHP_EOL;
+    echo "Debugging Error： " . mysqli_connect_error() . PHP_EOL;
+    exit;
+  }
+
+  return $link;
+}
+
 function dropTable($link)
 {
   $dropTableSql = 'DROP TABLE IF EXISTS memos;';
@@ -31,7 +43,11 @@ EOT;
   }
 }
 
+// DB接続
 $link = dbConnect();
+// table削除
 dropTable($link);
+// table作成
 createTable($link);
+// DB切断
 mysqli_close($link);
