@@ -23,7 +23,7 @@ EOT;
     if (!$result) {
         // $sqlを実行するためにmysqli_query内に記述、$linkはtureかfalseの判定
         error_log('Error: fail to create review');
-        error_log('Debugging Error: ' . mysqli_error(($link)));
+        error_log('Debugging Error: ' . mysqli_error($link));
     }
 }
 
@@ -107,10 +107,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 登録が終わったらDBとの接続を切断する
         mysqli_close($link);
 
-        // リダイレクトする
+        // リダイレクトする(PHPでリダイレクトするにはheader関数を使う)
         header("Location: index.php");
     }
 }
 
+$title = '読書ログの登録';
+$content = __DIR__ . '/views/new.php';
+
 // もしエラーがあれば下記
-include 'views/new.php';
+include __DIR__ . '/views/layout.php';
