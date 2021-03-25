@@ -1,4 +1,4 @@
-<h3 class="h3 text-dark mb-4">読書ログの登録</h3>
+<h3 class="h3 text-dark mb-4">読書ログ登録</h3>
 <form action="create.php" method="post">
     <?php if (count($errors)) : ?>
         <ul class="text-danger">
