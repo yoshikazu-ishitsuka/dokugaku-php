@@ -1,36 +1,38 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php'; // __DIR__は現在のディレクトリを表す
+// require __DIR__ . '/../vendor/autoload.php'; // __DIR__は現在のディレクトリを表す
 
-function dbConnect()
-{
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-    $dotenv->load();
+// function dbConnect()
+// {
+//     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+//     $dotenv->load();
 
-    // $dbHost = getenv('DB_HOST');
-    $dbHost = $_ENV['DB_HOST'];
-    $dbUsername = $_ENV['DB_USERNAME'];
-    $dbPassword = $_ENV['DB_PASSWORD'];
-    $dbDatabase = $_ENV['DB_DATABASE'];
+//     // $dbHost = getenv('DB_HOST');
+//     $dbHost = $_ENV['DB_HOST'];
+//     $dbUsername = $_ENV['DB_USERNAME'];
+//     $dbPassword = $_ENV['DB_PASSWORD'];
+//     $dbDatabase = $_ENV['DB_DATABASE'];
 
-    // var_dump($dbHost);
-    // var_dump($dbUsername);
-    // var_dump($dbPassword);
-    // var_dump($dbDatabase);
+//     // var_dump($dbHost);
+//     // var_dump($dbUsername);
+//     // var_dump($dbPassword);
+//     // var_dump($dbDatabase);
 
 
-    $link = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase);
+//     $link = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbDatabase);
 
-    if (!$link) {
-        echo "Error: データベースに接続できません。：" . PHP_EOL;
-        echo "Debugging Error： " . mysqli_connect_error() . PHP_EOL;
-        exit;
+//     if (!$link) {
+//         echo "Error: データベースに接続できません。：" . PHP_EOL;
+//         echo "Debugging Error： " . mysqli_connect_error() . PHP_EOL;
+//         exit;
 
-        // echo "＊＊＊＊＊＊＊＊＊＊データベースに接続しました＊＊＊＊＊＊＊＊＊＊";
-    }
+//         // echo "＊＊＊＊＊＊＊＊＊＊データベースに接続しました＊＊＊＊＊＊＊＊＊＊";
+//     }
 
-    return $link;
-}
+//     return $link;
+// }
+
+require_once __DIR__ . '/lib/mysqli.php';
 
 function dropTable($link)
 {
